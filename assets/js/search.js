@@ -127,7 +127,7 @@ const resultTitle = (metadata, doc) => {
   const el = document.createElement('div')
   const link = document.createElement('a')
 
-  link.setAttribute('href', doc.relUrl)
+  link.setAttribute('href', '{{ site.baseurl }}' + doc.relUrl)
   link.innerHTML = highlightContent(metadata, 'title', doc.title)
 
   el.appendChild(link)
